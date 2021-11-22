@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-<head><title>Arte</title>
+<head><title id="rejoio">Arte</title>
 <meta charset="utf-8"/>
 </head>
 
@@ -29,6 +28,7 @@
 <hr>
 <a><h2>Créditos</h2></a>
 <p>Créditos a João Vitor Oliveira pelas ideias apresentadas, por ter escrito os textos e feito o site.</p>
+	
 	<script>
 		const subtitulo = document.querySelectorAll('a');
 		let indice = document.getElementById("indice");
@@ -36,5 +36,12 @@
 			subtitulo[x].name = "link"+x;
 			indice.innerHTML += "<li><a href='#link"+x+"'>"+subtitulo[x].textContent+"</a></li>"
 		}
+		function mostraHora(){
+	let titulo = document.getElementById('rejoio')
+	let agora = new Date();
+	titulo.textContent = "Arte"+agora.toLocaleTimeString();
+}
+mostraHora();
+setInterval(mostraHora,1000);
 	</script>
 </html>
