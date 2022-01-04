@@ -6,7 +6,7 @@
 
 <h1 align="center">Arte Segundo Meu Ver</h1>
 <hr>
-<ul id="indice">
+<ul id="indice" name="indice">
 	
 </ul>
 
@@ -28,13 +28,21 @@
 <hr>
 <a><h2>Créditos</h2></a>
 <p>Créditos a João Vitor Oliveira pelas ideias apresentadas, por ter escrito os textos e feito o site.</p>
-	<script src="https://fenixculatra.github.io/fenixtests/rejoio.js"></script>
+	
 	<script>
 		const subtitulo = document.querySelectorAll('a');
 		let indice = document.getElementById("indice");
 		for (x = 0 ; x < subtitulo.length ; x++){
 			subtitulo[x].name = "link"+x;
 			indice.innerHTML += "<li><a href='#link"+x+"'>"+subtitulo[x].textContent+"</a></li>"
+			subtitulo[x].innerHTML += "<a href='#indice'>Índice</a>"
 		}
+		function mostraHora(){
+	let titulo = document.getElementById('rejoio')
+	let agora = new Date();
+	titulo.textContent = "Arte"+agora.toLocaleTimeString();
+}
+mostraHora();
+setInterval(mostraHora,1000);
 	</script>
 </html>
