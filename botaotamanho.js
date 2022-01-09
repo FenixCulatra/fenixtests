@@ -29,7 +29,7 @@ if (p.length == 0) {
 //-----------------------------------------------------
 for (var x = 0; x < p.length; x++){
 	p[x].style.fontSize = `${tamanho}px`
-	espaco = document.creatElement("p")
+	espaco = document.createElement("p")
 	var butao = document.createElement("button")
 	p[x].appendChild(espaco)
 	p[x].appendChild(butao)
