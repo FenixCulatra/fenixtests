@@ -29,11 +29,14 @@ if (p.length == 0) {
 //-----------------------------------------------------
 for (var x = 0; x < p.length; x++){
 	p[x].style.fontSize = `${tamanho}px`
+	let espaco = document.createElement("span")
 	var butao = document.createElement("button")
+	p[x].appendChild(espaco)
 	p[x].appendChild(butao)
 	butao.setAttribute("onclick","javascript: aumenta(this.value)")
 	butao.setAttribute("value",`${x}`)
 	butao.setAttribute("style","background-color: black; color: white; border-radius: 10px;")
+	espaco.textContent = " "
 	butao.textContent = "+"
 	var butao = document.createElement("button")
 	p[x].appendChild(butao)
