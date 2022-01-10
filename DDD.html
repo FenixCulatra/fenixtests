@@ -1,0 +1,44 @@
+<html>
+<head><title>DDD</title>
+<Style>
+</Style>
+</head>
+<body>
+
+<table border=1>
+<tr>
+<td>
+<input type="text" id="cep" placeholder="CEP" size="40" style="text-align: center">
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<table id="cidades" style="width: 100%">
+</table></td>
+</tr>
+</table>
+<script>
+var largura = window.innerWidth
+document.querySelector("table").setAttribute("style",`left: ${(largura/2)-140}px; position: absolute`)
+//<input type="button" value="pesquisar">
+//<span> </span><input type="text" id="cidade" placeholder="Cidade" size=20 disabled>	
+document.querySelector("#cep").addEventListener("change",buscaDadosApi);
+pesquisar = document.querySelector("#cep")
+function buscaDadosApi(evento){
+	fetch(`https://brasilapi.com.br/api/ddd/v1/${pesquisar.value}`)
+	.then(resposta => resposta.json())
+	.then(dados =>  {
+		atribui(dados.cities,dados.state)
+	});
+}
+function atribui(valor,local) {
+	p = document.querySelector("#cidades")
+	p.innerHTML = `<tr style="background-color: gray"><td style="text-align: center">Cidades</td></tr> <br> <tr style="background-color: #b3b3b3"><td style="text-align: center">Estado: ${local}</td></tr>`
+	for (i = 0; i < valor.length; i++){
+		p.innerHTML += `<tr><td>${valor[i]}</td></tr>`
+		//alert(valor[i])
+	}
+}
+</script>
+</body>
+</<html>
