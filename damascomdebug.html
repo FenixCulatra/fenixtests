@@ -49,7 +49,12 @@ function criaTabuleiro() {
 
 function criaPeca(cor,i,j) {
     let imagem = document.createElement('img');
-    imagem.setAttribute('src', `img/${cor}.png`);
+    if (cor=="black") {
+        imagem.setAttribute('src', "https://raw.githubusercontent.com/FenixCulatra/fenixtests/main/img/black.png");
+    }
+    if (cor=="red") {
+        imagem.setAttribute('src', "https://raw.githubusercontent.com/FenixCulatra/fenixtests/main/img/red.png");
+    }
     imagem.setAttribute('width', `${tamanhoCelula-5}px`);
     imagem.setAttribute('height', `${tamanhoCelula-5}px`);
     imagem.setAttribute('class','draggable')
@@ -57,6 +62,7 @@ function criaPeca(cor,i,j) {
     return imagem;
 
 }
+
 document.querySelector("table").append(document.createElement('p'))
 p = document.querySelector('p')
 console.log("começou o código")
