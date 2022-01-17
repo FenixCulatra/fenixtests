@@ -6,3 +6,5 @@ https://fenixculatra.github.io/fenixtests/ARTEaomeuver.html
 https://fenixculatra.github.io/fenixtests/aleluia2.html
 https://FenixCulatra.github.io/fenixtests/botaotamanho.js
 https://FenixCulatra.github.io/fenixtests/DDD.html
+https://FenixCulatra.github.io/fenixtests/damas.html
+https://FenixCulatra.github.io/fenixtests/damascomdebug.html
