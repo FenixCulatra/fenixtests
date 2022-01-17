@@ -77,7 +77,7 @@ console.log("começou o código")
                     const draggable = document.querySelector('.dragging')
                     evento.preventDefault()
                     console.log()
-                    //debug(["distância y: ",Math.abs(container.id[1] - draggable.name[1]),"distância x:",Math.abs(container.id[3] - draggable.name[3]) ,"y-c",container.id[3],"y-d",draggable.name[3]])
+                    debug(["distância y: ",Math.abs(container.id[1] - draggable.name[1]),"distância x:",Math.abs(container.id[3] - draggable.name[3]) ,"y-c",container.id[3],"y-d",draggable.name[3]])
                     draggable.addEventListener('dragend', () => {
                         var distanciaY = Math.abs(parseInt(container.id[1]) - parseInt(draggable.name[1]))
                         var distanciaX = Math.abs(parseInt(container.id[3]) - parseInt(draggable.name[3]))
